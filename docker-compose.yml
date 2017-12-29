@@ -1,0 +1,17 @@
+version: '2.3'
+services:
+
+  cloudera-rstudio:
+    domainname: quickstart.cloudera
+    hostname: quickstart.cloudera
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8888:8888
+      - 7180:7180
+      - 8080:80
+    tty: true
+    privileged: true
+    restart: always
+    command: /usr/bin/docker-quickstart #/home/cloudera/cloudera-manager --express
