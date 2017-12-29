@@ -2,7 +2,6 @@ version: '2.3'
 services:
 
   cloudera-rstudio:
-    domainname: quickstart.cloudera
     hostname: quickstart.cloudera
     build:
       context: ./
@@ -11,6 +10,7 @@ services:
       - 8888:8888
       - 7180:7180
       - 8080:80
+      - 3306:3306
     tty: true
     privileged: true
     restart: always
