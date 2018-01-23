@@ -11,7 +11,6 @@ services:
       - 7180:7180
       - 8080:80
       - 3306:3306
-      - 8787:8787
     tty: true
     privileged: true
     restart: always
