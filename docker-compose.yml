@@ -1,7 +1,7 @@
 version: '2.3'
 services:
 
-  cloudera-rstudio:
+  quickstart.cloudera:
     hostname: quickstart.cloudera
     build:
       context: ./
@@ -16,3 +16,8 @@ services:
     privileged: true
     restart: always
     command: /usr/bin/docker-quickstart #/home/cloudera/cloudera-manager --express
+
+networks:
+  default:
+    external:
+      name: cluster
